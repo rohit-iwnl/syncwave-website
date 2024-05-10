@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 type Props = {};
 
@@ -15,7 +16,20 @@ export default function Navbar({}: Props) {
   };
 
   return (
-    <div className="w-full px-5 py-8 justify-between items-center flex">
+    <motion.div
+      initial={{
+        y: -100,
+        opacity: 0.5,
+      }}
+      animate={{
+        y: -0,
+        opacity: 1,
+      }}
+      transition={{
+        duration: 1,
+      }}
+      className="w-full sticky top-0 z-[99] px-5 py-8 justify-between items-center flex"
+    >
       {/* Logo */}
       <div className="flex items-center justify-center gap-2">
         <Image
@@ -28,7 +42,7 @@ export default function Navbar({}: Props) {
       </div>
 
       {/* MenuBar */}
-      <div className="flex flex-row gap-6 justify-center items-center">
+      <div className="hidden md:flex flex-row gap-6 justify-center items-center">
         <Link
           href="/"
           className={getClassName(0)}
@@ -50,6 +64,24 @@ export default function Navbar({}: Props) {
           <p>About Us</p>
         </Link>
       </div>
-    </div>
+
+      {/* Hamburger Menu */}
+      <div className="md:hidden">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M4 6h16M4 12h16m-7 6h7"
+          />
+        </svg>
+      </div>
+    </motion.div>
   );
 }
