@@ -27,6 +27,7 @@ export default function Navbar({}: Props) {
       }}
       transition={{
         duration: 1,
+        delay: 0.85,
       }}
       className="w-full sticky top-0 z-[99] px-5 py-8 justify-between items-center flex"
     >

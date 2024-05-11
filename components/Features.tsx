@@ -1,0 +1,60 @@
+"use server";
+import React from "react";
+import FeatureCard from "./ui/FeatureCard";
+
+type Props = {};
+
+const features = [
+  {
+    title: "Find a roommate",
+    description:
+      "Our software will match you with someone who fits your lifestyle and personal preferences",
+    iconFile: "users.svg",
+  },
+  {
+    title: "Split Expenses",
+    description:
+      "Manage finances better with roommates by customized payment methods and bill splitting",
+    iconPath: "dollar.svg",
+  },
+  {
+    title: "Find student housing",
+    description: "New to town? Find  accommodations that are perfect for you",
+    iconPath: "home.svg",
+  },
+  {
+    title: "Sell or Buy Items",
+    description:
+      "Moving out? Moving in? Find quality furnishings and items being sold by students near you",
+    iconPath: "store.svg",
+  },
+  {
+    title: "Find a community",
+    description:
+      "Our personalized experience can connect you to a community of students just like you",
+    iconPath: "chat.svg",
+  },
+  {
+    title: "Lease your space",
+    description:
+      "Have a place you need to sublease? List your space on the platform for other students to find",
+    iconPath: "lease.svg",
+  },
+];
+
+export default async function Features({}: Props) {
+  return (
+    <div className="min-h-[50vh] p-10 w-full bg-red-200 grid grid-cols-1 ">
+      {features
+        ? features.map((feature, idx) => (
+            <FeatureCard
+              key={idx}
+              title={feature.title}
+              description={feature.description}
+              iconFile={feature.iconPath ?? ""}
+            />
+          ))
+        : null}
+    </div>
+  );
+}

@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import {Sora} from 'next/font/google'
+import { Sora } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const sora = Sora({ subsets: ["latin"] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({
       <body className={`${sora.className} max-w-screen`}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

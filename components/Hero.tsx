@@ -9,7 +9,7 @@ type Props = {};
 
 export default function Hero({}: Props) {
   return (
-    <div className=" w-full h-screen max-h-screen flex mt-10 md:mt-14 gap-10 flex-col">
+    <div className=" w-full h-screen max-h-screen flex mt-10 gap-10 flex-col">
       <div className="flex flex-col gap-5">
         <h1
           className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center font-bold bg-clip-text text-transparent"
@@ -89,12 +89,12 @@ export default function Hero({}: Props) {
             className="relative w-full h-full flex items-center justify-center"
           >
             <Image
-              src="/assets/images/mockup.png"
+              src="/assets/images/14pro.png"
               alt="mockup"
               width={0}
               height={0}
               sizes="100vw"
-              className="object-contain absolute w-[60%] h-[100%] "
+              className="object-contain absolute md:bottom-0  w-[60%] h-[85%] "
             />
           </motion.div>
         </div>
