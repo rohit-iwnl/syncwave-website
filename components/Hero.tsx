@@ -56,7 +56,7 @@ export default function Hero({}: Props) {
         <div className="relative w-full h-full flex items-center justify-center">
           <motion.div
             initial={{
-              opacity: 0,
+              opacity: 0.1,
             }}
             animate={{
               opacity: 1,
@@ -86,7 +86,7 @@ export default function Hero({}: Props) {
               delay: 1.5,
               ease: "easeIn",
             }}
-            className="relative w-full h-full flex items-center justify-center"
+            className="relative w-full h-full flex items-center justify-center border-b-2"
           >
             <Image
               src="/assets/images/14pro.png"

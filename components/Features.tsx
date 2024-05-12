@@ -9,7 +9,7 @@ const features = [
     title: "Find a roommate",
     description:
       "Our software will match you with someone who fits your lifestyle and personal preferences",
-    iconFile: "users.svg",
+    iconPath: "users.svg",
   },
   {
     title: "Split Expenses",
@@ -44,7 +44,7 @@ const features = [
 
 export default async function Features({}: Props) {
   return (
-    <div className="min-h-[50vh] p-10 w-full bg-red-200 grid grid-cols-1 ">
+    <div className="min-h-[50vh] p-10 mt-10 w-full  grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-12 md:gap-4">
       {features
         ? features.map((feature, idx) => (
             <FeatureCard
