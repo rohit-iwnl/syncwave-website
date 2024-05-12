@@ -22,9 +22,9 @@ export default async function FeatureCard({
         height={0}
         className="w-10 h-10 object-contain mt-5 md:w-10 md:h-10"
       />
-      <div className="flex flex-col gap-4 md:w-[20vw]">
+      <div className="flex flex-col text-wrap leading-loose gap-4 w-full md:w-[22vw]">
         <h2 className="font-bold">{title}</h2>
-        <p className="text-sm">{description}</p>
+        <p className="text-sm md:w-[18vw]">{description}</p>
       </div>
     </div>
   );

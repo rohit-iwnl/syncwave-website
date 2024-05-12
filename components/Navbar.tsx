@@ -48,17 +48,17 @@ export default function Navbar({}: Props) {
           href="/"
           className={getClassName(0)}
           onClick={(e) => {
-            e.preventDefault(); // Prevent the default link behavior
+ // Prevent the default link behavior
             setIndex(0);
           }}
         >
           <p>Explore</p>
         </Link>
         <Link
-          href="/"
+          href="/aboutUs"
           className={getClassName(1)}
           onClick={(e) => {
-            e.preventDefault(); // Prevent the default link behavior
+// Prevent the default link behavior
             setIndex(1);
           }}
         >

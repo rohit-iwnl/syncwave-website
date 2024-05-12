@@ -44,17 +44,22 @@ const features = [
 
 export default async function Features({}: Props) {
   return (
-    <div className="min-h-[50vh] p-10 mt-10 w-full  grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-12 md:gap-4">
-      {features
-        ? features.map((feature, idx) => (
-            <FeatureCard
-              key={idx}
-              title={feature.title}
-              description={feature.description}
-              iconFile={feature.iconPath ?? ""}
-            />
-          ))
-        : null}
+    <div className="flex w-full max-w-7xl mx-auto items-center justify-center flex-col mt-32 md:mt-40">
+      <h1 className="text-3xl font-bold text-center md:text-4xl lg:text-5xl px-10">
+        A platform for all your student-life needs
+      </h1>
+      <div className="min-h-[50vh] p-10 mt-10 w-full  grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-12 md:gap-4">
+        {features
+          ? features.map((feature, idx) => (
+              <FeatureCard
+                key={idx}
+                title={feature.title}
+                description={feature.description}
+                iconFile={feature.iconPath ?? ""}
+              />
+            ))
+          : null}
+      </div>
     </div>
   );
 }

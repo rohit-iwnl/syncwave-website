@@ -9,10 +9,10 @@ type Props = {};
 
 export default function Hero({}: Props) {
   return (
-    <div className=" w-full h-screen max-h-screen flex mt-10 gap-10 flex-col">
+    <div className="w-full max-w-7xl mx-auto h-screen max-h-screen flex mt-10 gap-10 flex-col">
       <div className="flex flex-col gap-5">
         <h1
-          className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center font-bold bg-clip-text text-transparent"
+          className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center font-bold bg-clip-text text-transparent px-2"
           style={{
             backgroundImage: "linear-gradient(to bottom, #242424, #8A8A8A)",
             WebkitBackgroundClip: "text",
@@ -21,7 +21,7 @@ export default function Hero({}: Props) {
         >
           Your all-in-one solution for student life
         </h1>
-        <p className="text-sm md:text-lg text-center">
+        <p className="text-sm md:text-lg text-center px-2">
           Curate the perfect accommodations, sync schedules, streamline tasks,
           and
           <br className="hidden md:flex" /> explore more features to simplify
@@ -41,7 +41,7 @@ export default function Hero({}: Props) {
         </Link>
 
         <Link
-          href="/about_us"
+          href="/aboutUs"
           className="rounded-full border-[#727272] border-[2px] px-4 py-2 "
         >
           <button>
