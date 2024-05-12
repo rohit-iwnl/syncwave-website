@@ -3,11 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import Component from "./ui/HamburgerMenu";
 
 type Props = {};
 
 export default function Navbar({}: Props) {
   const [index, setIndex] = useState(0);
+
+  const [menuOpened, setMenuOpened] = useState(false);
 
   const getClassName = (idx: number) => {
     return idx === index
@@ -32,15 +35,17 @@ export default function Navbar({}: Props) {
       className="w-full sticky top-0 z-[99] px-5 py-8 justify-between items-center flex"
     >
       {/* Logo */}
-      <div className="flex items-center justify-center gap-2">
-        <Image
-          src="/assets/images/SyncwaveLogo.svg"
-          alt="Syncwave Logo"
-          width={42}
-          height={42}
-        />
-        <h1 className="text-lg font-bold uppercase">Syncwave</h1>
-      </div>
+      {menuOpened ? null : (
+        <div className="flex items-center justify-center gap-2">
+          <Image
+            src="/assets/images/SyncwaveLogo.svg"
+            alt="Syncwave Logo"
+            width={42}
+            height={42}
+          />
+          <h1 className="text-lg font-bold uppercase">Syncwave</h1>
+        </div>
+      )}
 
       {/* MenuBar */}
       <div className="hidden md:flex flex-row gap-6 justify-center items-center">
@@ -48,7 +53,7 @@ export default function Navbar({}: Props) {
           href="/"
           className={getClassName(0)}
           onClick={(e) => {
- // Prevent the default link behavior
+            // Prevent the default link behavior
             setIndex(0);
           }}
         >
@@ -58,7 +63,7 @@ export default function Navbar({}: Props) {
           href="/aboutUs"
           className={getClassName(1)}
           onClick={(e) => {
-// Prevent the default link behavior
+            // Prevent the default link behavior
             setIndex(1);
           }}
         >
@@ -68,20 +73,7 @@ export default function Navbar({}: Props) {
 
       {/* Hamburger Menu */}
       <div className="md:hidden">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-6 w-6"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M4 6h16M4 12h16m-7 6h7"
-          />
-        </svg>
+        <Component />
       </div>
     </motion.div>
   );

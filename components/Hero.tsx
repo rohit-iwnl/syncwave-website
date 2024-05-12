@@ -33,7 +33,7 @@ export default function Hero({}: Props) {
       <div className="flex flex-row items-center justify-center gap-10">
         <Link
           href="/explore"
-          className="rounded-full border-[#727272] border-[2px] px-4 py-2 "
+          className="rounded-full border-[#727272] border-[2px] hover:border-green-300 transition-colors duration-300 px-4 py-2 "
         >
           <button>
             <p className="text-[#727272] font-bold">explore</p>
@@ -42,7 +42,7 @@ export default function Hero({}: Props) {
 
         <Link
           href="/aboutUs"
-          className="rounded-full border-[#727272] border-[2px] px-4 py-2 "
+          className="rounded-full border-[#727272] hover:border-green-300 transition-colors duration-300 ease-in-out border-[2px] px-4 py-2 "
         >
           <button>
             <p className="text-[#727272] font-bold">about us</p>
