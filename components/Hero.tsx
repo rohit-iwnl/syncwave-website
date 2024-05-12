@@ -67,7 +67,7 @@ export default function Hero({}: Props) {
             }}
           >
             <Image
-              src="/assets/images/flower.svg" // Ensure the path is correct
+              src="/assets/images/Flower.svg" // Ensure the path is correct
               alt="mockup"
               layout="fill" // Takes the full width and height of the parent
               className="object-cover object-top absolute bottom-0 " // Covers the entire area of the container, possibly cropping the image
