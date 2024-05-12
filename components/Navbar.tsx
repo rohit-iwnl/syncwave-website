@@ -10,12 +10,10 @@ type Props = {};
 export default function Navbar({}: Props) {
   const [index, setIndex] = useState(0);
 
-  const [menuOpened, setMenuOpened] = useState(false);
-
   const getClassName = (idx: number) => {
     return idx === index
-      ? "px-4 py-2 bg-green-400 rounded-3xl" // Active state
-      : "px-4 py-2 rounded-3xl"; // Inactive state
+      ? "px-4 py-2 bg-green-400 rounded-3xl" 
+      : "px-4 py-2 rounded-3xl"; 
   };
 
   return (
@@ -35,18 +33,15 @@ export default function Navbar({}: Props) {
       className="w-full sticky top-0 z-[99] px-5 py-8 justify-between items-center flex"
     >
       {/* Logo */}
-      {menuOpened ? null : (
-        <div className="flex items-center justify-center gap-2">
-          <Image
-            src="/assets/images/SyncwaveLogo.svg"
-            alt="Syncwave Logo"
-            width={42}
-            height={42}
-          />
-          <h1 className="text-lg font-bold uppercase">Syncwave</h1>
-        </div>
-      )}
-
+      <div className="flex items-center justify-center gap-2">
+        <Image
+          src="/assets/images/SyncwaveLogo.svg"
+          alt="Syncwave Logo"
+          width={42}
+          height={42}
+        />
+        <h1 className="text-lg font-bold uppercase">Syncwave</h1>
+      </div>
       {/* MenuBar */}
       <div className="hidden md:flex flex-row gap-6 justify-center items-center">
         <Link
@@ -70,7 +65,6 @@ export default function Navbar({}: Props) {
           <p>About Us</p>
         </Link>
       </div>
-
       {/* Hamburger Menu */}
       <div className="md:hidden">
         <Component />
