@@ -8,7 +8,7 @@ export default function NavbarLogo() {
       width={0}
       height={0}
       alt="Syncwave Logo"
-      className="w-[3rem] h-[3rem]"
+      className="w-[2rem] h-[2rem] md:w-[3rem] md:h-[3rem] "
     />
   );
 }
