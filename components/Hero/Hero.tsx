@@ -24,10 +24,10 @@ export default function Hero() {
             />
 
             {/* Hero Text */}
-            <section className="flex flex-col items-center justify-center gap-y-4 w-full max-w-4xl md:max-w-5xl text-center px-4">
+            <section className="flex flex-col items-center justify-center gap-y-4 w-full h-full max-w-4xl md:max-w-5xl text-center px-4">
                 <motion.div
                     initial={{ opacity: 0, y: "100%" }}
-                    animate={{ opacity: 1, y: "-25%" }}
+                    animate={{ opacity: 1, y: "0%" }}
                     transition={{ duration: 0.75, delay: 1, ease: "easeOut" }}
                     className="flex flex-col items-center justify-center gap-y-2 w-full"
                 >

@@ -5,13 +5,16 @@ import Hero from "@/components/Hero/Hero";
 
 export default function Home() {
   return (
-    <div className="flex flex-col w-screen h-screen relative max-w-6xl mx-auto md:max-w-7xl">
+    <div className="flex flex-col w-screen relative max-w-6xl mx-auto md:max-w-7xl">
       <nav className="w-full h-[5rem] flex absolute items-center justify-center">
         <Navbar />
       </nav>
-      <main className="flex-1">
+      <main className="flex w-full h-screen relative">
         <Hero />
       </main>
+        <div className="w-full h-screen flex  items-center justify-center">
+          Hello
+        </div>
     </div>
   );
 }
